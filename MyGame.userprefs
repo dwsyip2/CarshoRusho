@@ -5,7 +5,7 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="src\GameController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CarshoRusho Status">
     <Files>
       <File FileName="src\GameController.cs" Line="20" Column="18" />
       <File FileName="GameBoard.cs" Line="41" Column="26" />
@@ -24,7 +24,7 @@
       <File FileName="Lorry.cs" Line="13" Column="4" />
       <File FileName="Motorcycle.cs" Line="13" Column="4" />
       <File FileName="TestAll.cs" Line="100" Column="7" />
-      <File FileName="..\..\..\..\..\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets" Line="1819" Column="5" />
+      <File FileName="CarshoRusho Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
