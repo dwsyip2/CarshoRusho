@@ -41,9 +41,9 @@ namespace MyGame
 			if (!gameBoard.ObstacleCondition ())
 				return;
 			Random _random = new Random ();
-			int _chance = _random.Next (0, 20);
+			int _chance = _random.Next (0, 25);
 
-			/*if (_chance == 0 || _chance == 1 || _chance == 2) {
+			if (_chance == 0 || _chance == 1 || _chance == 2) {
 				gameBoard.RandomSpawnVehicle (new Car (startLane2X, startLaneY));
 			} else if (_chance == 3 || _chance == 4 || _chance == 5) {
 				gameBoard.RandomSpawnVehicle (new Lorry (startLane2X, startLaneY));
@@ -53,12 +53,14 @@ namespace MyGame
 				gameBoard.RandomSpawnVehicle (new Fuel (startLane2X, startLaneY));
 			} else if (_chance == 10 || _chance == 11 || _chance == 12) {
 				gameBoard.RandomSpawnVehicle (new Life (startLane2X, startLaneY));
-			} else*/ if (_chance == 13 || _chance == 14 || _chance == 15) {
+			} else if (_chance == 13 || _chance == 14 || _chance == 15) {
 				gameBoard.RandomSpawnVehicle (new Invisible (startLane2X, startLaneY));
 			} else if (_chance == 16 || _chance == 17) {
 				gameBoard.RandomSpawnVehicle (new Score (startLane2X, startLaneY));
-			} else if (_chance == 18 | _chance == 19 ){
+			} else if (_chance == 18 || _chance == 19) {
 				gameBoard.RandomSpawnVehicle (new Bomb (startLane2X, startLaneY));
+			} else if (_chance == 20 || _chance == 21) {
+				gameBoard.RandomSpawnVehicle (new Turbo (startLane2X, startLaneY));
 			}
 		}
 

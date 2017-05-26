@@ -10,7 +10,8 @@ namespace MyGame
 		Life,
 		Invisible,
 		Score,
-		Bomb
+		Bomb,
+		Turbo
 
 	}
 }

@@ -8,19 +8,21 @@ namespace MyGame
 		const int ButtonX = 50;
 		const int ButtonY = 150;
 		const int Spacing = 5;
-		const int ButtonWidth = 200;
-		const int ButtonHeight = 50;
+		const int ButtonWidth = 179;
+		const int ButtonHeight = 45;
 		string [] menu = {
 			"Difficulty",
 			"Maximum Obstacle",
 			"Sound / Music",
+			" ",
 		};
 		string [][] secondLevelList = {
 			new string[]{
 			"Easy",
 			"Medium",
 			"Hard",
-			"Extreme"
+			"Extreme",
+            " ",
 			}
 		};
 
@@ -28,12 +30,19 @@ namespace MyGame
 		{
 			SwinGame.DrawBitmap ("bg.jpg", 0, 0);
 			for (int i = 0; i < menu.Length; i++) {
-				SwinGame.FillRectangle (Color.Yellow, ButtonX, ButtonY + (Spacing + ButtonHeight) * i, ButtonWidth, ButtonHeight);
+
+				//Setting button
+				SwinGame.DrawBitmap ("difficulty.png", ButtonX, ButtonY);
+				SwinGame.DrawBitmap ("maximum.png", ButtonX, ButtonY + 51);
+				SwinGame.DrawBitmap ("bgm.png", ButtonX, ButtonY + 101);
+
+
+				SwinGame.FillRectangle (Color.Transparent, ButtonX, ButtonY + (Spacing + ButtonHeight) * i, ButtonWidth, ButtonHeight);
 				if (UtilityFunction.IsMouseInRectangle (ButtonX, ButtonY + (Spacing + ButtonHeight) * i, ButtonWidth, ButtonHeight, SwinGame.MousePosition ())) {
 					if (SwinGame.MouseDown (MouseButton.LeftButton))
-						SwinGame.FillRectangle (Color.GreenYellow, ButtonX, ButtonY + (Spacing + ButtonHeight) * i, ButtonWidth, ButtonHeight);
+						SwinGame.FillRectangle (Color.LimeGreen, ButtonX, ButtonY + (Spacing + ButtonHeight) * i, ButtonWidth, ButtonHeight);
 					else
-						SwinGame.DrawRectangle (Color.Gold, ButtonX, ButtonY + (Spacing + ButtonHeight) * i, ButtonWidth, ButtonHeight);
+						SwinGame.DrawRectangle (Color.Azure, ButtonX, ButtonY + (Spacing + ButtonHeight) * i, ButtonWidth, ButtonHeight);
 				}
 				SwinGame.DrawText (menu [i], Color.Black,ButtonX + 10 * Spacing, ButtonY + ButtonHeight / 2 + (Spacing + ButtonHeight) * i);
 			}
@@ -74,12 +83,20 @@ namespace MyGame
 			UtilityFunction.gameStateStack.Push (GameState.ChangingDifficulty);
 			int Level = 1;
 			for (int i = 0; i < secondLevelList[row].Length; i++) {
-				SwinGame.FillRectangle (Color.LightYellow, ButtonX + (Spacing + ButtonWidth) * (Level), ButtonY + (Spacing + ButtonHeight) * i, ButtonWidth, ButtonHeight);
+
+				//Sub button
+				SwinGame.DrawBitmap ("easy.png", ButtonX + 185, ButtonY );
+				SwinGame.DrawBitmap ("medium.png", ButtonX + 185, ButtonY + 51);
+				SwinGame.DrawBitmap ("hard.png", ButtonX + 185, ButtonY + 101 );
+				SwinGame.DrawBitmap ("extreme.png", ButtonX + 185, ButtonY + 151);
+
+
+				SwinGame.FillRectangle (Color.Transparent, ButtonX + (Spacing + ButtonWidth) * (Level), ButtonY + (Spacing + ButtonHeight) * i, ButtonWidth, ButtonHeight);
 				if (UtilityFunction.IsMouseInRectangle (ButtonX + (Spacing + ButtonWidth) * (Level), ButtonY + (Spacing + ButtonHeight) * i, ButtonWidth, ButtonHeight, SwinGame.MousePosition ())) {
 					if (SwinGame.MouseDown (MouseButton.LeftButton))
-						SwinGame.FillRectangle (Color.GreenYellow, ButtonX + (Spacing + ButtonWidth) * (Level), ButtonY + (Spacing + ButtonHeight) * i, ButtonWidth, ButtonHeight);
+						SwinGame.FillRectangle (Color.LimeGreen, ButtonX + (Spacing + ButtonWidth) * (Level), ButtonY + (Spacing + ButtonHeight) * i, ButtonWidth, ButtonHeight);
 					else
-						SwinGame.DrawRectangle (Color.Gold, ButtonX + (Spacing + ButtonWidth) * (Level), ButtonY + (Spacing + ButtonHeight) * i, ButtonWidth, ButtonHeight);
+						SwinGame.DrawRectangle (Color.Azure, ButtonX + (Spacing + ButtonWidth) * (Level), ButtonY + (Spacing + ButtonHeight) * i, ButtonWidth, ButtonHeight);
 				}
 				SwinGame.DrawText (secondLevelList [row][i], Color.Black, ButtonX + 10 * Spacing + (Spacing + ButtonWidth) * (Level) , ButtonY + ButtonHeight / 2 + (Spacing + ButtonHeight) * i);
 			}
