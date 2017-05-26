@@ -8,18 +8,17 @@ namespace MyGame
 	{
 		public Turbo (double x, double y) : base (x, y)
 		{
-			_speedY = 2.5;
-
+			_speedX = 2.5;
 		}
 
 		public override void Draw ()
 		{
+			//SwinGame.DrawRectangle (Color.Transparent, (float)X, (float)Y, 80, 80);  
 			SwinGame.DrawBitmap ("turbo.png", (float)X, (float)Y);
 		}
 
-
 		public ObstacleType getType {
-			get { return ObstacleType.Invisible; }
+			get { return ObstacleType.Turbo; }
 		}
 	}
 }

@@ -12,6 +12,7 @@ namespace MyGame
 		public DateTime _curTime;
 		public bool transparent;
 		public static Stopwatch sw = new Stopwatch ();
+		public bool speed;
 
 		public PlayerVehicle (double x, double y)
 		{
@@ -65,6 +66,24 @@ namespace MyGame
 			}
 		}
 
+		public void NavigateSpeed ()
+		{
+			if (speed == true) {
+				if (sw.ElapsedMilliseconds <= 3000) {
+					_spdX = 125;
+					_spdY = 125;
+					_acc = 50;
+				} else {
+					sw.Stop ();
+					speed = false;
+				}
+			} else {
+				_spdX = 100;
+				_spdY = 100;
+				_acc = 0;
+			}
+		}
+
 		public void Draw ()
 		{
 			SwinGame.DrawRectangle (Color.Transparent, (float)X, (float)Y, 80, 80);
@@ -80,6 +99,11 @@ namespace MyGame
 			}
 		}
 
+		public bool Speed {
+			get { return speed; }
+			set { speed = value; }
+
+		}
 
 		public bool Transparent {
 			get { return transparent; }

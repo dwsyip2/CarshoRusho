@@ -36,6 +36,7 @@ namespace MyGame
 			Invisible i = new Invisible (415, 20);
 			Score s = new Score (415, 20);
 			Bomb b = new Bomb (415, 20);
+			Turbo t = new Turbo (415, 20);
 
 			gb.RandomSpawnVehicle (c);
 			Assert.AreEqual (22.5, c.Y);
@@ -55,6 +56,7 @@ namespace MyGame
 			Invisible i = new Invisible (415, 20);
             Score s = new Score (415, 20);
             Bomb b = new Bomb (415, 20);
+			Turbo t = new Turbo (415, 20);
 
 			while (gb.Spawned == false)
 			{
@@ -79,6 +81,7 @@ namespace MyGame
 			Invisible i = new Invisible (415, 20);
             Score s = new Score (415, 20);
             Bomb b = new Bomb (415, 20);
+			Turbo t = new Turbo (415, 20);
 
 			//right
 			p.NavigateRight ();
@@ -108,6 +111,7 @@ namespace MyGame
 			Invisible i = new Invisible (415, 20);
             Score s = new Score (415, 20);
             Bomb b = new Bomb (415, 20);
+			Turbo t = new Turbo (415, 20);
 
 	
 				gb.RandomSpawnVehicle (c);
@@ -129,6 +133,7 @@ namespace MyGame
 			Invisible i = new Invisible (415, 20);
             Score s = new Score (415, 20);
             Bomb b = new Bomb (415, 20);
+			Turbo t = new Turbo (415, 20);
 
 			if (gb.GameOver() == true)
 			{

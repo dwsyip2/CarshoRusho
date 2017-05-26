@@ -178,6 +178,12 @@ namespace MyGame
 						if (_obstacles [i] is Bomb) {
 							ScoreBoard.Life = 0;
 						}
+
+						if (_obstacles [i] is Turbo) {
+							p.speed = true;
+							PlayerVehicle.sw.Restart ();
+							p.NavigateSpeed ();
+						}
 					}
 						_obstacles.Remove (_obstacles [i]);
 						i--;
