@@ -19,7 +19,7 @@ namespace MyGame
 		private static Stopwatch s1 = Stopwatch.StartNew ();
 		public static int numberOfObstacles = 1;
 		static int [] positionX = { 320, 415, 510 };
-
+		public GameStage _stage;
 
 
 
@@ -84,9 +84,9 @@ namespace MyGame
 				o.Acceleration = 500 + (int)(s1.Elapsed.TotalSeconds / 20) * 100;
 			}
 			if (UtilityFunction.currentDifficulty.Equals (GameDifficulty.Extreme)) {
-				o.SpeedY = 400+ (int)(s1.Elapsed.TotalSeconds / 20) * 0;
+				o.SpeedY = 400+ (int)(s1.Elapsed.TotalSeconds / 20) * 100;
 				o.SpeedX = 400;
-				o.Acceleration = 0 + (int)(s1.Elapsed.TotalSeconds / 20) * 0;
+				o.Acceleration = 0 + (int)(s1.Elapsed.TotalSeconds / 20) * 100;
 				int desiredPositionCount = 2;
 				int prevX = (int)o.X;
 				//debugPattern.Clear ();
@@ -100,11 +100,14 @@ namespace MyGame
 					pattern.X = xTemp;
 					prevX = (int)pattern.X;
 					o.PatternQueue.Enqueue(pattern);
-					//debugPattern.Add (pattern);
 				}
 
 			}
 			ScoreBoard.Stage = (int)(s1.Elapsed.TotalSeconds / 20) + 1;
+			if (ScoreBoard.Stage % 5 == 0)
+				_stage = GameStage.BonusStage;
+			else
+				_stage = GameStage.NormalStage;
 		}
 
 		public void DisplaySpeed()
@@ -149,9 +152,6 @@ namespace MyGame
 
 		internal void MoveObstacle (PlayerVehicle p)
 		{
-			//Obstacle o = Obstacles [Obstacles.Count - 1];
-			//SwinGame.DrawText (o.Y.ToString () + " " + o.X.ToString (),
-			//				   Color.AliceBlue, 0,0);
 			for (int i = 1; i < debugPattern.Count; i++) {
 				SwinGame.DrawText (debugPattern [i].Y.ToString () + " " + debugPattern [i].X.ToString (),
 								  Color.AliceBlue,
@@ -162,14 +162,14 @@ namespace MyGame
 				_obstacles[i].Drop (p);
 				if (_obstacles [i].Y >= 600 || _obstacles [i].Collision (p) == true) {
 					if (_obstacles [i].Collision (p) == true) {
-						ScoreBoard.Life += _obstacles [i].LifeReward;
-
 						if (_obstacles [i] is Invisible) {
 							p.Transparent = true;
 							PlayerVehicle.sw.Restart ();
 							p.Draw ();
 							ScoreBoard.Life += 0;
 						}
+
+						ScoreBoard.Life += _obstacles [i].LifeReward;
 
 						if (_obstacles [i] is Score) {
 							ScoreBoard.Score += 10;
@@ -181,8 +181,9 @@ namespace MyGame
 
 						if (_obstacles [i] is Turbo) {
 							p.speed = true;
-							PlayerVehicle.sw.Restart ();
-							p.NavigateSpeed ();
+							//p.NavigateSpeed ();
+							p.SpeedX += 100;
+							p.SpeedY += 100;
 						}
 					}
 					if (_obstacles [i].GetObstacleType == ObstacleType.Bomb ||
@@ -193,7 +194,6 @@ namespace MyGame
 					_obstacles.Remove (_obstacles [i]);
 						i--;
 				}
-
             }
 		}
 
@@ -237,7 +237,12 @@ namespace MyGame
 			get{return _spawnpoints; }
 			set{_spawnpoints = value; }
 		}
-			
+
+		public GameStage Stage {
+			get { return _stage; }
+			set { _stage = value; }
+		}
+
 
 	}
 }

@@ -111,6 +111,7 @@
     <Compile Include="Score.cs" />
     <Compile Include="Bomb.cs" />
     <Compile Include="src\Turbo.cs" />
+    <Compile Include="src\GameStage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">
@@ -233,6 +234,9 @@
     <None Include="Resources\images\player2.png" />
     <None Include="player2.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="src\turbo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <Target Name="CopyFiles">

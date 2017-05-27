@@ -12,6 +12,5 @@ namespace MyGame
 		Score,
 		Bomb,
 		Turbo
-
 	}
 }

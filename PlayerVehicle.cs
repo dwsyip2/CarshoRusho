@@ -11,11 +11,10 @@ namespace MyGame
 		public DateTime _prevTime;
 		public DateTime _curTime;
 		public bool transparent;
-		public ObstacleType _type;
 		public static Stopwatch sw = new Stopwatch ();
 		public bool speed;
 
-		public PlayerVehicle (double x, double y, ObstacleType type)
+		public PlayerVehicle (double x, double y)
 		{
 			_x = x;
 			_y = y;
@@ -24,7 +23,6 @@ namespace MyGame
 			_acc = 1000;
 			_prevTime = DateTime.Now;
 			_curTime = DateTime.Now;
-			_type = type;
 		}
 
 		public void UpdateTime ()
@@ -33,8 +31,9 @@ namespace MyGame
 			_curTime = DateTime.Now;
 		}
 
-
-		//Move up
+		/// <summary>
+		/// Execute update time method before using this.
+		/// </summary>
 		public void NavigateUp ()
 		{
 			if (Y > 90) {
@@ -43,8 +42,9 @@ namespace MyGame
 			}
 		}
 
-
-		//Move Down
+		/// <summary>
+		/// Execute update time method before using this.
+		/// </summary>
 		public void NavigateDown ()
 		{
 			if (Y < 530) {
@@ -52,19 +52,27 @@ namespace MyGame
 				Y += _curTime.Subtract (_prevTime).TotalMilliseconds / 1000 * SpeedY;
 			}
 		}
+		/// <summary>
+		/// Execute update time method before using this.
+		/// </summary>
 		public void NavigateLeft ()
 		{
-			if (X > 280) {
-				_spdX += _curTime.Subtract (_prevTime).TotalMilliseconds / 1000 * _acc;
-				X -= _curTime.Subtract (_prevTime).TotalMilliseconds / 1000 * SpeedX;
+			_spdX += _curTime.Subtract (_prevTime).TotalMilliseconds / 1000 * _acc;
+			X -= _curTime.Subtract (_prevTime).TotalMilliseconds / 1000 * SpeedX;
+			if (X < GameController.startLane1X - 20) {
+				X = GameController.startLane1X - 20;
 			}
 		}
 
+		/// <summary>
+		/// Execute update time method before using this.
+		/// </summary>
 		public void NavigateRight ()
 		{
-			if (X < 530) {
-				_spdX += _curTime.Subtract (_prevTime).TotalMilliseconds / 1000 * _acc;
-				X += _curTime.Subtract (_prevTime).TotalMilliseconds / 1000 * SpeedX;
+			_spdX += _curTime.Subtract (_prevTime).TotalMilliseconds / 1000 * _acc;
+			X += _curTime.Subtract (_prevTime).TotalMilliseconds / 1000 * SpeedX;
+			if (X > GameController.startLane3X + 20) {
+				X = GameController.startLane3X + 20;
 			}
 		}
 
@@ -139,10 +147,6 @@ namespace MyGame
 		public double Acceleration {
 			get { return _acc; }
 			set { _acc = value; }
-		}
-
-		public ObstacleType GetType(){
-			return _type;
 		}
 	}
 }
