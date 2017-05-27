@@ -6,7 +6,7 @@ namespace MyGame
 {
 	public class Invisible : Obstacle
 	{
-		public Invisible (double x, double y) : base (x, y)
+		public Invisible (double x, double y) : base (x, y, ObstacleType.Invisible)
 		{
 			_speedY = 2.5;
 		}

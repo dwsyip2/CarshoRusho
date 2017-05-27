@@ -6,7 +6,7 @@ namespace MyGame
 {
 	public class Life : Obstacle
 	{
-		public Life (double x, double y) : base (x, y)
+		public Life (double x, double y) : base (x, y, ObstacleType.Life)
 		{
 			_speedY = 2.5;
 			_lifeCount = 2;

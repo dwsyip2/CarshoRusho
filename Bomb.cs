@@ -5,7 +5,7 @@ namespace MyGame
 {
 	public class Bomb:Obstacle
 	{
-		public Bomb (double x, double y) : base (x,y)
+		public Bomb (double x, double y) : base (x,y,ObstacleType.Bomb)
 		{
 			_speedY = 2.5;
 

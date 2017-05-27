@@ -7,23 +7,25 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench ActiveDocument="CarshoRusho Status">
     <Files>
-      <File FileName="src\GameController.cs" Line="20" Column="18" />
-      <File FileName="GameBoard.cs" Line="41" Column="26" />
-      <File FileName="PlayerVehicle.cs" Line="29" Column="25" />
-      <File FileName="src\GameMain.cs" Line="47" Column="6" />
-      <File FileName="UtilityFunction.cs" Line="12" Column="30" />
-      <File FileName="src\ObstacleType.cs" Line="17" Column="1" />
-      <File FileName="Invisible.cs" Line="10" Column="4" />
+      <File FileName="src\GameController.cs" Line="20" Column="19" />
+      <File FileName="GameBoard.cs" Line="172" Column="8" />
+      <File FileName="PlayerVehicle.cs" Line="20" Column="11" />
+      <File FileName="src\GameMain.cs" Line="41" Column="14" />
+      <File FileName="UtilityFunction.cs" Line="15" Column="30" />
+      <File FileName="src\ObstacleType.cs" Line="15" Column="3" />
       <File FileName="src\GameResources.cs" Line="15" Column="13" />
-      <File FileName="ScoreBoard.cs" Line="49" Column="9" />
-      <File FileName="Bomb.cs" Line="7" Column="3" />
-      <File FileName="Score.cs" Line="20" Column="3" />
-      <File FileName="Car.cs" Line="1" Column="1" />
-      <File FileName="Life.cs" Line="4" Column="1" />
-      <File FileName="Fuel.cs" Line="13" Column="4" />
-      <File FileName="Lorry.cs" Line="13" Column="4" />
-      <File FileName="Motorcycle.cs" Line="13" Column="4" />
-      <File FileName="TestAll.cs" Line="100" Column="7" />
+      <File FileName="Obstacle.cs" Line="113" Column="4" />
+      <File FileName="Car.cs" Line="9" Column="37" />
+      <File FileName="Lorry.cs" Line="10" Column="63" />
+      <File FileName="Motorcycle.cs" Line="10" Column="73" />
+      <File FileName="Fuel.cs" Line="10" Column="61" />
+      <File FileName="Invisible.cs" Line="9" Column="77" />
+      <File FileName="Life.cs" Line="9" Column="67" />
+      <File FileName="Score.cs" Line="9" Column="69" />
+      <File FileName="Bomb.cs" Line="8" Column="65" />
+      <File FileName="src\Turbo.cs" Line="15" Column="4" />
+      <File FileName="TestAll.cs" Line="126" Column="67" />
+      <File FileName="src\MainMenuController.cs" Line="16" Column="16" />
       <File FileName="CarshoRusho Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>

@@ -7,7 +7,7 @@ namespace MyGame
 	public class Motorcycle:Obstacle
 	{
 		//private double _speed; 
-		public Motorcycle (double x,double y):base(x,y)
+		public Motorcycle (double x,double y):base(x,y,ObstacleType.Motorcycle)
 		{
 			_speedY = 2.5;
 			_lifeCount = -1;

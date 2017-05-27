@@ -11,10 +11,11 @@ namespace MyGame
 		public DateTime _prevTime;
 		public DateTime _curTime;
 		public bool transparent;
+		public ObstacleType _type;
 		public static Stopwatch sw = new Stopwatch ();
 		public bool speed;
 
-		public PlayerVehicle (double x, double y)
+		public PlayerVehicle (double x, double y, ObstacleType type)
 		{
 			_x = x;
 			_y = y;
@@ -23,6 +24,7 @@ namespace MyGame
 			_acc = 1000;
 			_prevTime = DateTime.Now;
 			_curTime = DateTime.Now;
+			_type = type;
 		}
 
 		public void UpdateTime ()
@@ -139,6 +141,9 @@ namespace MyGame
 			set { _acc = value; }
 		}
 
-}
+		public ObstacleType GetType(){
+			return _type;
+		}
+	}
 }
 

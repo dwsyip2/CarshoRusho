@@ -6,7 +6,7 @@ namespace MyGame
 {
 	public class Car:Obstacle
 	{
-		public Car (double x,double y):base(x,y)
+		public Car (double x,double y):base(x,y,ObstacleType.Car)
 		{
 			_lifeCount = -1;
 		}

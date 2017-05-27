@@ -7,7 +7,7 @@ namespace MyGame
 	public class Fuel:Obstacle
 	{
 		//private double _speed; 
-		public Fuel (double x,double y):base(x,y)
+		public Fuel (double x,double y):base(x,y,ObstacleType.Fuel)
 		{
 			_speedY = 2.5;
 			_lifeCount = 1;

@@ -51,9 +51,9 @@ namespace MyGame
 		}
 		public void GetScore ()
 		{
-			foreach (Obstacle c in _obstacles) {
-				ScoreBoard.Score += 1;
-			}
+			//foreach (Obstacle c in _obstacles) {
+			//	ScoreBoard.Score += 1;
+			//}
 		}
 
 		public void RandomSpawnVehicle (Obstacle o)
@@ -172,7 +172,7 @@ namespace MyGame
 						}
 
 						if (_obstacles [i] is Score) {
-							ScoreBoard.Score += 500;
+							ScoreBoard.Score += 10;
 						}
 
 						if (_obstacles [i] is Bomb) {
@@ -185,7 +185,12 @@ namespace MyGame
 							p.NavigateSpeed ();
 						}
 					}
-						_obstacles.Remove (_obstacles [i]);
+					if (_obstacles [i].GetObstacleType == ObstacleType.Bomb ||
+					    _obstacles [i].GetObstacleType == ObstacleType.Car ||
+					    _obstacles [i].GetObstacleType == ObstacleType.Lorry ||
+					    _obstacles [i].GetObstacleType == ObstacleType.Motorcycle)
+						ScoreBoard.Score += 1;
+					_obstacles.Remove (_obstacles [i]);
 						i--;
 				}
 

@@ -6,7 +6,7 @@ namespace MyGame
 {
 	public class Score : Obstacle
 	{
-		public Score (double x, double y) : base (x, y)
+		public Score (double x, double y) : base (x, y, ObstacleType.Score)
 		{
 			_speedY = 2.5;
 		}

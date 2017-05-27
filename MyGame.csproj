@@ -110,6 +110,7 @@
     <Compile Include="Invisible.cs" />
     <Compile Include="Score.cs" />
     <Compile Include="Bomb.cs" />
+    <Compile Include="src\Turbo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">

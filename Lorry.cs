@@ -7,7 +7,7 @@ namespace MyGame
 	public class Lorry:Obstacle
 	{
 		//private double _speed; 
-		public Lorry (double x,double y):base(x,y)
+		public Lorry (double x,double y):base(x,y,ObstacleType.Lorry)
 		{
 			_speedY = 2.5;
 			_lifeCount = -1;

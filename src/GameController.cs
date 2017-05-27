@@ -16,7 +16,7 @@ namespace MyGame
 		{
 			gameBoard = new GameBoard ();
 			ScoreBoard.Initialize (0, 3, 1, "Peak Hours");
-			p = new PlayerVehicle (415, 570);
+			p = new PlayerVehicle (415, 570, ObstacleType.Car);
 			p.SpeedX = 100;
 			p.SpeedY = 100;
 			p.Acceleration = 0;

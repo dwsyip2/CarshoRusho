@@ -26,7 +26,7 @@ namespace MyGame
 		public void TestSpawnVehicle()
 		{
 			GameBoard gb = new GameBoard (); 
-			PlayerVehicle p = new PlayerVehicle (415, 570);
+			PlayerVehicle p = new PlayerVehicle (415, 570,ObstacleType.Car);
 			ScoreBoard.Initialize(0, 3, 1, "Peak Hours");
 			Car c = new Car (415, 20);
 			Lorry l = new Lorry (415, 20);
@@ -46,7 +46,7 @@ namespace MyGame
 		public void TestDrop()
 		{
 			GameBoard gb = new GameBoard (); 
-			PlayerVehicle p = new PlayerVehicle (415, 570);
+			PlayerVehicle p = new PlayerVehicle (415, 570,ObstacleType.Car);
 			ScoreBoard.Initialize(0, 3, 1, "Peak Hours");
 			Car c = new Car (415, 20);
 			Lorry l = new Lorry (415, 20);
@@ -71,7 +71,7 @@ namespace MyGame
 		public void TestNagivate()
 		{
 			GameBoard gb = new GameBoard (); 
-			PlayerVehicle p = new PlayerVehicle (415, 570);
+			PlayerVehicle p = new PlayerVehicle (415, 570, ObstacleType.Car);
 			ScoreBoard.Initialize (0, 0, 1, "Peak Hours");
 			Car c = new Car (415, 20);
 			Lorry l = new Lorry (415, 20);
@@ -101,7 +101,7 @@ namespace MyGame
 			GameBoard gb = new GameBoard (); 
 			Stopwatch s1 = Stopwatch.StartNew(); 
 			s1.Start ();
-			PlayerVehicle p = new PlayerVehicle (415, 570);
+			PlayerVehicle p = new PlayerVehicle (415, 570, ObstacleType.Car);
 			ScoreBoard.Initialize(0, 0, 1, "Peak Hours");
 			Car c = new Car (415, 20);
 			Lorry l = new Lorry (415, 20);
@@ -123,7 +123,7 @@ namespace MyGame
 		public void TestgameOver()
 		{
 			GameBoard gb = new GameBoard ();
-			PlayerVehicle p = new PlayerVehicle (415, 570);
+			PlayerVehicle p = new PlayerVehicle (415, 570, ObstacleType.Car);
 			ScoreBoard.Initialize(0, 0, 1, "Peak Hours");
 			Car c = new Car (415, 20);
 			Lorry l = new Lorry (415, 20);

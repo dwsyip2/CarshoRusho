@@ -16,17 +16,19 @@ namespace MyGame
 		const int END = 610;
 		const int minX = 320, maxX = 510;
 		private double nextX;
-
+		private ObstacleType _type;
 		public Obstacle ()
 		{
+			_type = ObstacleType.Car;
 			_y = 20;
 			ConstructorBaseAction ();
 		}
 
-		public Obstacle(double x,double y)
+		public Obstacle(double x,double y,ObstacleType type)
 		{
 			_x = x;
 			_y = y;
+			_type = type;
 			ConstructorBaseAction ();
 		}
 
@@ -116,6 +118,9 @@ namespace MyGame
 		public Queue<Pattern> PatternQueue {
 			get { return _patternQueue; }
 			set { _patternQueue = value; }
+		}
+		public ObstacleType GetObstacleType {
+			get { return _type; }
 		}
 	}
 }
