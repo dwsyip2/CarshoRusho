@@ -13,7 +13,7 @@ namespace MyGame
 
 		public override void Draw ()
 		{
-			//SwinGame.DrawRectangle (Color.Transparent, (float)X, (float)Y, 80, 80);  
+			SwinGame.DrawRectangle (Color.Transparent, (float)X, (float)Y, 80, 80);  
 			SwinGame.DrawBitmap ("turbo.png", (float)X, (float)Y);
 		}
 

@@ -103,7 +103,7 @@ namespace MyGame
 				}
 
 			}
-			ScoreBoard.Stage = (int)(s1.Elapsed.TotalSeconds / 20) + 1;
+			ScoreBoard.Stage = (int)(s1.Elapsed.TotalSeconds / 5) + 1;
 			if (ScoreBoard.Stage % 5 == 0)
 				_stage = GameStage.BonusStage;
 			else

@@ -43,9 +43,13 @@ namespace MyGame
 			Random _random = new Random ();
 			int _chance = _random.Next (0, 25);
 			if (gameBoard.Stage == GameStage.BonusStage) {
-				gameBoard.RandomSpawnVehicle (new Score (startLane2X, startLaneY));
-				if (gameBoard.Obstacles [gameBoard.Obstacles.Count - 1].GetObstacleType == ObstacleType.Score)
+				if (gameBoard.Obstacles.Count == 0) {
+					gameBoard.RandomSpawnVehicle (new Score (startLane2X, startLaneY));
 					gameBoard.Obstacles [gameBoard.Obstacles.Count - 1].SpeedY = 2000;
+				}
+				else {
+					//if (gameBoard.Obstacles [gameBoard.Obstacles.Count - 1].GetObstacleType == ObstacleType.Score)
+				}
 			} else {
 				if (_chance == 0 || _chance == 1 || _chance == 2) {
 					gameBoard.RandomSpawnVehicle (new Car (startLane2X, startLaneY));
@@ -73,7 +77,10 @@ namespace MyGame
 		{
 			SwinGame.DrawText ("Score:" + ScoreBoard.Score.ToString (), Color.Black, 10, 100);
 			SwinGame.DrawText ("Life:" + ScoreBoard.Life.ToString (), Color.Black, 10, 150);
-			SwinGame.DrawText ("Stage:" + ScoreBoard.Stage.ToString (), Color.Black, 10, 200);
+			if (gameBoard.Stage == GameStage.BonusStage)
+				SwinGame.DrawText ("Bonus Stage", Color.Black, 20, 200);
+			else
+				SwinGame.DrawText ("Stage:" + ScoreBoard.Stage.ToString (), Color.Black, 10, 200);
 			SwinGame.DrawText ("Speed:" + ScoreBoard.Traffic, Color.Black, 10, 350);
 			SwinGame.DrawText ("Right Arrow key to move right", Color.Black, 10, 250);
 			SwinGame.DrawText ("Left Arrow key to move left", Color.Black, 10, 300);
