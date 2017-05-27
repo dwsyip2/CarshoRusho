@@ -5,7 +5,7 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="CarshoRusho Status">
+  <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="src\GameController.cs" Line="45" Column="21" />
       <File FileName="UtilityFunction.cs" Line="30" Column="1" />
