@@ -117,14 +117,10 @@
     <Reference Include="SwinGame">
       <HintPath>lib\SwinGame.dll</HintPath>
     </Reference>
-    <Reference Include="System.Drawing">
-      <Private>True</Private>
-    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System" />
     <Reference Include="nunit.framework">
       <HintPath>packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="System">
-      <HintPath>lib\System.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
