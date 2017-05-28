@@ -6,5 +6,4 @@ install:
   - sudo apt-get install mono-complete
 script:
   - msbuild MyGame.sln
-  - gmcs -pkg:dotnet *.cs
   - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./bin/Debug/MyGame.exe
