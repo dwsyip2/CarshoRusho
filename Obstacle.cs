@@ -5,7 +5,7 @@ using SwinGameSDK;
 
 namespace MyGame
 {
-	public class Obstacle
+	public abstract class Obstacle
 	{
 		protected double _x, _y, _acc, _speedY, _speedX;
 		protected Queue<Pattern> _patternQueue;
@@ -77,7 +77,7 @@ namespace MyGame
 			if (PatternQueue.Count > 0) {
 				if (Y >= PatternQueue.Peek ().Y) {
 					int xDirection = Math.Sign (_patternQueue.Peek ().X - _x);
-					SpeedX = SpeedY * xDirection * 2;
+					SpeedX = SpeedY * xDirection * 2 > 500 ? 500:SpeedY * xDirection * 2;
 					nextX = PatternQueue.Peek ().X;
 				}
 				if ((Math.Abs (X - nextX) < 5)) {
