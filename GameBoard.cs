@@ -22,7 +22,6 @@ namespace MyGame
 		public GameStage _stage;
 
 
-
 		const int xMin = 320;
 		const int xFullRange = 190;
 		const int yMin = 0;
@@ -103,8 +102,28 @@ namespace MyGame
 				}
 			}
 			ScoreBoard.Stage = (int)(s1.Elapsed.TotalSeconds / 5) + 1;
-			if (ScoreBoard.Stage % 5 == 0)
+			if (ScoreBoard.Stage % 5 == 0) {
+				if (_stage == GameStage.NormalStage) {
+					Font font = new Font ("Notification", "arial.ttf", 36);
+					font.FontStyle = FontStyle.BoldFont;
+					s1.Stop ();
+					SwinGame.DrawBitmap ("bg2.jpg", 0, 0);
+					SwinGame.DrawText ("BONUS STAGE! READY...3", Color.Magenta, "Notification", new Point2D () { X = 200, Y = 300 });
+					SwinGame.RefreshScreen (60);
+					SwinGame.Delay (1000);
+					SwinGame.DrawBitmap ("bg2.jpg", 0, 0);
+					SwinGame.DrawText ("BONUS STAGE! READY...2", Color.Magenta, "Notification", new Point2D () { X = 200, Y = 300 });
+					SwinGame.RefreshScreen (60);
+					SwinGame.Delay (1000);
+					SwinGame.DrawBitmap ("bg2.jpg", 0, 0);
+					SwinGame.DrawText ("BONUS STAGE! READY...1", Color.Magenta, "Notification", new Point2D () { X = 200, Y = 300 });
+					SwinGame.RefreshScreen (60);
+					SwinGame.Delay (1000);
+					s1.Start ();
+					font.Dispose ();
+				}
 				_stage = GameStage.BonusStage;
+			}
 			else
 				_stage = GameStage.NormalStage;
 		}
