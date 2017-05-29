@@ -1,4 +1,4 @@
-language: c#
+language: csharp
 solution: MyGame.sln
 install:
   - nuget restore MyGame.sln
@@ -6,7 +6,9 @@ install:
   - sudo apt-get install mono-complete
 script:
   - msbuild MyGame.sln
+  - mstest MyGame.sln
   - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./bin/Debug/MyGame.exe
 mono:
 - latest
 - 3.12.0
+- 3.10.0
