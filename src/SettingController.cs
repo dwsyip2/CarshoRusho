@@ -28,7 +28,7 @@ namespace MyGame
 
 		public override void DrawPage ()
 		{
-			SwinGame.DrawBitmap ("bg.jpg", 0, 0);
+			SwinGame.DrawBitmap ("bg2.jpg", 0, 0);
 			for (int i = 0; i < menu.Length; i++) {
 
 				//Setting button

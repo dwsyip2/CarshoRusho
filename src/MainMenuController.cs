@@ -15,12 +15,13 @@ namespace MyGame
 			"Setting",
 			"Instruction",
 			"Vehicle",
-			" ",
+			"",
+
 		};
 
 		public override void DrawPage ()
 		{
-			SwinGame.DrawBitmap ("bg.jpg", 0, 0);
+			SwinGame.DrawBitmap ("bg2.jpg", 0, 0);
 
 			for(int i = 0; i < menu.Length ; i++) {
 				SwinGame.FillRectangle (Color.Transparent, ButtonX, ButtonY + (Spacing + ButtonHeight) * i, ButtonWidth, ButtonHeight);

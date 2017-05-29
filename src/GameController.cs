@@ -29,7 +29,7 @@ namespace MyGame
 				p.Draw ();
 			}
 			if (UtilityFunction.gameStateStack.Peek () == GameState.GameOverPage)
-				SwinGame.DrawBitmap ("gameover.jpg", 0, 0);
+				SwinGame.DrawBitmap ("gameover2.jpg", 0, 0);
 
 			foreach (Obstacle o in gameBoard.Obstacles) {
 				o.Draw ();
@@ -75,15 +75,16 @@ namespace MyGame
 
 		void UpdateList ()
 		{
-			SwinGame.DrawText ("Score:" + ScoreBoard.Score.ToString (), Color.Black, 10, 100);
-			SwinGame.DrawText ("Life:" + ScoreBoard.Life.ToString (), Color.Black, 10, 150);
+			//GameResources.GameFont ("New").FontStyle=FontStyle.BoldFont;
+			SwinGame.DrawText ("Score:" + ScoreBoard.Score.ToString (), Color.WhiteSmoke, 10, 100);
+			SwinGame.DrawText ("Life:" + ScoreBoard.Life.ToString (), Color.WhiteSmoke, 10, 150);
 			if (gameBoard.Stage == GameStage.BonusStage)
 				SwinGame.DrawText ("Bonus Stage", Color.Black, 20, 200);
 			else
-				SwinGame.DrawText ("Stage:" + ScoreBoard.Stage.ToString (), Color.Black, 10, 200);
-			SwinGame.DrawText ("Speed:" + ScoreBoard.Traffic, Color.Black, 10, 350);
-			SwinGame.DrawText ("Right Arrow key to move right", Color.Black, 10, 250);
-			SwinGame.DrawText ("Left Arrow key to move left", Color.Black, 10, 300);
+				SwinGame.DrawText ("Stage:" + ScoreBoard.Stage.ToString (), Color.WhiteSmoke, 10, 200);
+			SwinGame.DrawText ("Speed:" + ScoreBoard.Traffic, Color.WhiteSmoke, 10, 350);
+			SwinGame.DrawText ("Right Arrow key to move right", Color.WhiteSmoke, 10, 250);
+			SwinGame.DrawText ("Left Arrow key to move left", Color.WhiteSmoke, 10, 300);
 		}
 
 		public override void Execute ()
