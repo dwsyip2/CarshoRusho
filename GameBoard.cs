@@ -70,23 +70,23 @@ namespace MyGame
 		{
 			//difficulty control
 			if (UtilityFunction.currentDifficulty.Equals (GameDifficulty.Easy)) {
-				o.SpeedY = 200 + (int)(s1.Elapsed.TotalSeconds / 20)*100;
+				o.SpeedY = 200 + (ScoreBoard.Stage - 1)*100;
 				o.Acceleration = 0;
 			}
 
 			if (UtilityFunction.currentDifficulty.Equals (GameDifficulty.Medium)) {
 				o.SpeedY = 200;
-				o.Acceleration = 500 + (int)(s1.Elapsed.TotalSeconds / 20) * 100;
+				o.Acceleration = 500 + (ScoreBoard.Stage - 1) * 100;
 			}
 
 			if (UtilityFunction.currentDifficulty.Equals (GameDifficulty.Hard)) {
-				o.SpeedY = 200 + (int)(s1.Elapsed.TotalSeconds / 20) * 100;
-				o.Acceleration = 500 + (int)(s1.Elapsed.TotalSeconds / 20) * 100;
+				o.SpeedY = 200 + (ScoreBoard.Stage - 1) * 100;
+				o.Acceleration = 500 + (ScoreBoard.Stage - 1) * 100;
 			}
 			if (UtilityFunction.currentDifficulty.Equals (GameDifficulty.Extreme)) {
-				o.SpeedY = 400+ (int)(s1.Elapsed.TotalSeconds / 20) * 100;
+				o.SpeedY = 400+ (ScoreBoard.Stage - 1) * 100;
 				o.SpeedX = 400;
-				o.Acceleration = 0 + (int)(s1.Elapsed.TotalSeconds / 20) * 100;
+				o.Acceleration = 0 + (ScoreBoard.Stage - 1) * 100;
 				int desiredPositionCount = 2;
 				int prevX = (int)o.X;
 				//debugPattern.Clear ();
@@ -101,7 +101,6 @@ namespace MyGame
 					prevX = (int)pattern.X;
 					o.PatternQueue.Enqueue(pattern);
 				}
-
 			}
 			ScoreBoard.Stage = (int)(s1.Elapsed.TotalSeconds / 5) + 1;
 			if (ScoreBoard.Stage % 5 == 0)
