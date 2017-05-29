@@ -46,7 +46,7 @@ namespace MyGame
 		{
 			//SwinGame.FillRectangleOnScreen (Color.LightGray, 0, 0, 300, 800);
 			//SwinGame.FillRectangleOnScreen (Color.LightGray, 600, 0, 300, 800);
-			SwinGame.DrawBitmap ("bg.jpg", 0, 0);
+			SwinGame.DrawBitmap ("bg2.jpg", 0, 0);
 			SwinGame.DrawText ("" + s1.Elapsed.Seconds, Color.White, 300, 300);
 		}
 		public void GetScore ()
