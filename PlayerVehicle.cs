@@ -107,7 +107,20 @@ namespace MyGame
 					transparent = false;
 				}
 			} else {
-				SwinGame.DrawBitmap ("player.png", (float)X, (float)Y);
+				//if (MouseButton.LeftButton.Equals.case0)
+				//if (CarSelectionController.CarVariety.Equals (CarType.Car)) {
+				//	SwinGame.DrawBitmap ("player.png", (float)X, (float)Y);
+				//} else if (CarSelectionController.CarVariety.Equals (CarType.SportCar)){
+				//	SwinGame.DrawBitmap ("SportCar.png", (float)X, (float)Y);
+				//}
+				bool b = CarSelectionController.CarVariety.Equals (CarType.Car);
+				bool a = CarSelectionController.CarVariety.Equals (CarType.SportCar);
+				if (b == true) {
+					SwinGame.DrawBitmap ("Car.png", (float)X, (float)Y);
+				} else if (a == true) {
+					SwinGame.DrawBitmap ("SportCar.png", (float)X, (float)Y);
+				}
+
 			}
 		}
 
