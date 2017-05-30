@@ -14,16 +14,20 @@ namespace MyGame
 			"Difficulty",
 			"Maximum Obstacle",
 			"Sound / Music",
+			"Vehicle",
 			" ",
 		};
-		string [][] secondLevelList = {
+		string [] [] secondLevelList = {
 			new string[]{
 			"Easy",
 			"Medium",
 			"Hard",
 			"Extreme",
-            " ",
-			}
+			" "
+			},
+			new string[] {"1", "2", "MAX(3)"},
+			new string[] {""},
+			new string[] {"Lorry", "Car", "Motorcycle"}
 		};
 
 		public override void DrawPage ()

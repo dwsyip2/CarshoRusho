@@ -6,7 +6,7 @@ namespace MyGame
 {
 	public class Turbo : Obstacle
 	{
-		public Turbo (double x, double y) : base (x, y, ObstacleType.Lorry)
+		public Turbo (double x, double y) : base (x, y, ObstacleType.Turbo)
 		{
 			_speedX = 2.5;
 		}

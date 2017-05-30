@@ -58,13 +58,21 @@ namespace MyGame
 
 		public virtual bool Collision (PlayerVehicle p) {
 			//return false;
-
-				bool cond = SwinGame.PointInRect (SwinGame.PointAt ((float)X, (float)Y), (float)p.X - WIDTH, (float)p.Y - HEIGHT, WIDTH, HEIGHT);
+			bool cond = false;
+			if (!(p.isInvisible) || ((p.isInvisible) &&
+				(GetObstacleType == ObstacleType.Fuel ||
+					GetObstacleType == ObstacleType.Invisible ||
+					GetObstacleType == ObstacleType.Life ||
+					GetObstacleType == ObstacleType.Score ||
+			     GetObstacleType == ObstacleType.Turbo)))
+			{
+				cond = SwinGame.PointInRect (SwinGame.PointAt ((float)X, (float)Y), (float)p.X - WIDTH, (float)p.Y - HEIGHT, WIDTH, HEIGHT);
 				cond |= SwinGame.PointInRect (SwinGame.PointAt ((float)X - WIDTH, (float)Y), (float)p.X - WIDTH, (float)p.Y - HEIGHT, WIDTH, HEIGHT);
 				cond |= SwinGame.PointInRect (SwinGame.PointAt ((float)X, (float)Y - HEIGHT), (float)p.X - WIDTH, (float)p.Y - HEIGHT, WIDTH, HEIGHT);
 				cond |= SwinGame.PointInRect (SwinGame.PointAt ((float)X - WIDTH, (float)Y - HEIGHT), (float)p.X - WIDTH, (float)p.Y - HEIGHT, WIDTH, HEIGHT);
 				return cond;
-
+			}
+			return false;
 		}
 
 		public virtual void Drop (PlayerVehicle p) {

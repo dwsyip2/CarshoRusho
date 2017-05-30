@@ -55,17 +55,17 @@ namespace MyGame
 			//}
 		}
 
-		public void RandomSpawnVehicle (Obstacle o)
+		public void RandomSpawnVehicle (PlayerVehicle p, Obstacle o)
 		{
 			_spawnpoints = _random.Next (0, 3);
 			o.X = positionX [_spawnpoints];
 			o.Y = UtilityFunction.InitialY;
-			DifficultyHandler (o);
+			DifficultyHandler (p,o);
 			Obstacles.Add (o);
 			o.Draw ();
         }
 
-		void DifficultyHandler (Obstacle o)
+		void DifficultyHandler (PlayerVehicle p, Obstacle o)
 		{
 			//difficulty control
 			if (UtilityFunction.currentDifficulty.Equals (GameDifficulty.Easy)) {
@@ -121,6 +121,8 @@ namespace MyGame
 					SwinGame.Delay (1000);
 					s1.Start ();
 					font.Dispose ();
+					p.X = GameController.startLane2X;
+					p.Y = 600;
 				}
 				_stage = GameStage.BonusStage;
 			}
@@ -170,6 +172,7 @@ namespace MyGame
 
 		internal void MoveObstacle (PlayerVehicle p)
 		{
+
 			for (int i = 1; i < debugPattern.Count; i++) {
 				SwinGame.DrawText (debugPattern [i].Y.ToString () + " " + debugPattern [i].X.ToString (),
 								  Color.AliceBlue,
@@ -183,8 +186,8 @@ namespace MyGame
 						if (_obstacles [i] is Invisible) {
 							p.Transparent = true;
 							PlayerVehicle.sw.Restart ();
+							p.isInvisible = true;
 							p.Draw ();
-							ScoreBoard.Life += 0;
 						}
 
 						ScoreBoard.Life += _obstacles [i].LifeReward;
@@ -199,7 +202,6 @@ namespace MyGame
 
 						if (_obstacles [i] is Turbo) {
 							p.speed = true;
-							//p.NavigateSpeed ();
 							p.SpeedX += 100;
 							p.SpeedY += 100;
 						}

@@ -13,6 +13,7 @@ namespace MyGame
 		public bool transparent;
 		public static Stopwatch sw = new Stopwatch ();
 		public bool speed;
+		public bool isInvisible;
 
 		public PlayerVehicle (double x, double y)
 		{
@@ -102,6 +103,7 @@ namespace MyGame
 					SwinGame.DrawBitmap ("player2.png", (float)X, (float)Y);
 				} else {
 					sw.Stop ();
+					isInvisible = false;
 					transparent = false;
 				}
 			} else {

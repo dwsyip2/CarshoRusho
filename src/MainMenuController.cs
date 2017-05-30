@@ -14,9 +14,6 @@ namespace MyGame
 			"High Score",
 			"Setting",
 			"Instruction",
-			"Vehicle",
-			"",
-
 		};
 
 		public override void DrawPage ()
@@ -36,7 +33,7 @@ namespace MyGame
 					else
 						SwinGame.DrawRectangle (Color.Azure, ButtonX, ButtonY + (Spacing + ButtonHeight) * i, ButtonWidth, ButtonHeight);
 				}
-				SwinGame.DrawText (menu [i], Color.Black, ButtonX + 10 * Spacing, ButtonY + ButtonHeight / 2 + (Spacing + ButtonHeight) * i);
+				//SwinGame.DrawText (menu [i], Color.Black, ButtonX + 10 * Spacing, ButtonY + ButtonHeight / 2 + (Spacing + ButtonHeight) * i);
 			}
 		}
 

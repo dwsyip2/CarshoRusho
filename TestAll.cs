@@ -27,7 +27,7 @@ namespace MyGame
 			ScoreBoard.Initialize (0, 3, 1, "Peak Hours");
 			Car c = new Car (415, 20);
 
-			gb.RandomSpawnVehicle (c);
+			gb.RandomSpawnVehicle (p, c);
 			Assert.AreEqual (UtilityFunction.InitialY, c.Y);
 		}
 
