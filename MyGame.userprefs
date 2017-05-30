@@ -18,7 +18,7 @@
       <File FileName="PlayerVehicle.cs" Line="116" Column="56" />
       <File FileName="src\Turbo.cs" Line="17" Column="45" />
       <File FileName="src\SettingController.cs" Line="8" Column="25" />
-      <File FileName="MyGame.csproj" Line="11" Column="41" />
+      <File FileName="MyGame.csproj" Line="1" Column="1" />
       <File FileName="CarshoRusho Status" />
     </Files>
     <Pads>
@@ -27,9 +27,10 @@
           <Node name="MyGame" expanded="True">
             <Node name="MyGame" expanded="True">
               <Node name="References" expanded="True" />
-              <Node name="src" expanded="True">
-                <Node name="GameMain.cs" selected="True" />
+              <Node name="Resources" expanded="True">
+                <Node name="images" expanded="True" />
               </Node>
+              <Node name="src" expanded="True" selected="True" />
             </Node>
           </Node>
         </State>

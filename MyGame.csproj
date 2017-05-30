@@ -6,7 +6,6 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{871B5A90-103A-46A5-BBB9-07C02B9851D1}</ProjectGuid>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>  
     <OutputType>WinExe</OutputType>
     <RootNamespace>MyGame</RootNamespace>
     <ApplicationIcon>Resources\SwinGame.ico</ApplicationIcon>
@@ -207,7 +206,6 @@
     <WinLibraryFiles Include="lib\win\SDL_ttf.dll" />
     <WinLibraryFiles Include="lib\win\SGSDK.dll" />
     <WinLibraryFiles Include="lib\win\smpeg.dll" />
-    <WinLibraryFiles Include="lib\System.dll" />
     <WinLibraryFiles Include="lib\win\swingame.rc" />
     <WinLibraryFiles Include="lib\win\zlib1.dll" />
     <None Include="car.png">
@@ -242,6 +240,9 @@
     </None>
     <None Include="turbo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\images\SportCar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <Target Name="CopyFiles">

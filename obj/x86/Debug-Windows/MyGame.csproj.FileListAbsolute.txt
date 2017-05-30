@@ -350,3 +350,4 @@ C:\Users\User\Desktop\Sem 7\SWE20001 Software Development Tools & Practices\Asse
 C:\Users\User\Desktop\Sem 7\SWE20001 Software Development Tools & Practices\Assessment\Distinction Project\Sprint 3\CarshoRusho\bin\Debug\MyGame.exe
 C:\Users\User\Desktop\Sem 7\SWE20001 Software Development Tools & Practices\Assessment\Distinction Project\Sprint 3\CarshoRusho\obj\x86\Debug-Windows\MyGame.exe
 C:\Users\User\Desktop\Sem 7\SWE20001 Software Development Tools & Practices\Assessment\Distinction Project\Sprint 3\CarshoRusho\bin\Debug\System.dll
+C:\Users\User\Desktop\Sem 7\SWE20001 Software Development Tools & Practices\Assessment\Distinction Project\Sprint 3\CarshoRusho\bin\Debug\Resources\images\SportCar.png
