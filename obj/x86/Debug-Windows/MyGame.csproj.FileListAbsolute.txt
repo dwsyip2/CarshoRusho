@@ -347,8 +347,6 @@ C:\Users\User\Desktop\Sem 7\SWE20001 Software Development Tools & Practices\Asse
 C:\Users\User\Desktop\Sem 7\SWE20001 Software Development Tools & Practices\Assessment\Distinction Project\Sprint 3\CarshoRusho\bin\Debug\nunit.framework.xml
 C:\Users\User\Desktop\Sem 7\SWE20001 Software Development Tools & Practices\Assessment\Distinction Project\Sprint 3\CarshoRusho\obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache
 C:\Users\User\Desktop\Sem 7\SWE20001 Software Development Tools & Practices\Assessment\Distinction Project\Sprint 3\CarshoRusho\bin\Debug\turbo.png
-C:\Users\User\Desktop\Sem 7\SWE20001 Software Development Tools & Practices\Assessment\Distinction Project\Sprint 3\CarshoRusho\bin\Debug\MyGame.exe
-C:\Users\User\Desktop\Sem 7\SWE20001 Software Development Tools & Practices\Assessment\Distinction Project\Sprint 3\CarshoRusho\obj\x86\Debug-Windows\MyGame.exe
 C:\Users\User\Desktop\Sem 7\SWE20001 Software Development Tools & Practices\Assessment\Distinction Project\Sprint 3\CarshoRusho\bin\Debug\System.dll
 C:\Users\User\Desktop\Sem 7\SWE20001 Software Development Tools & Practices\Assessment\Distinction Project\Sprint 3\CarshoRusho\bin\Debug\Resources\images\SportCar.png
 C:\Users\user\Documents\GitHub\CarshoRusho\bin\Debug\Resources\animations\startup.txt
@@ -396,3 +394,5 @@ C:\Users\user\Documents\GitHub\CarshoRusho\bin\Debug\normnfkd.nlp
 C:\Users\user\Documents\GitHub\CarshoRusho\obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache
 C:\Users\user\Documents\GitHub\CarshoRusho\obj\x86\Debug-Windows\MyGame.exe
 C:\Users\user\Documents\GitHub\CarshoRusho\bin\Debug\Resources\sounds\hello.mp3
+C:\Users\User\Desktop\Sem 7\SWE20001 Software Development Tools & Practices\Assessment\Distinction Project\Sprint 3\CarshoRusho\bin\Debug\MyGame.dll
+C:\Users\User\Desktop\Sem 7\SWE20001 Software Development Tools & Practices\Assessment\Distinction Project\Sprint 3\CarshoRusho\obj\x86\Debug-Windows\MyGame.dll

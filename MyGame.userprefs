@@ -1,4 +1,4 @@
-﻿<Properties StartupConfiguration="{871B5A90-103A-46A5-BBB9-07C02B9851D1}|Default" GitUserInfo="UsingMD">
+﻿<Properties StartupConfiguration="{871B5A90-103A-46A5-BBB9-07C02B9851D1}|Unit Tests" GitUserInfo="UsingMD">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Windows|x86" />
   <MonoDevelop.Ide.ItemProperties.MyGame PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
@@ -7,16 +7,8 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench ActiveDocument="CarshoRusho Status">
     <Files>
-      <File FileName="src\GameController.cs" Line="50" Column="1" />
-      <File FileName="GameBoard.cs" Line="202" Column="73" />
-      <File FileName="src\GameDifficulty.cs" Line="9" Column="10" />
-      <File FileName="src\SettingController.cs" Line="149" Column="34" />
-      <File FileName="src\InstructionController.cs" Line="1" Column="1" />
-      <File FileName="src\GameMain.cs" Line="19" Column="4" />
-      <File FileName="src\MainMenuController.cs" Line="70" Column="10" />
-      <File FileName="PlayerVehicle.cs" Line="16" Column="26" />
-      <File FileName="src\CarSelectionController.cs" Line="76" Column="4" />
-      <File FileName="Obstacle.cs" Line="80" Column="6" />
+      <File FileName="Obstacle.cs" Line="79" Column="37" />
+      <File FileName="src\GameMain.cs" Line="22" Column="32" />
       <File FileName="CarshoRusho Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
