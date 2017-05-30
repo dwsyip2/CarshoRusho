@@ -14,7 +14,7 @@ namespace MyGame
 			"High Score",
 			"Setting",
 			"Instruction",
-			"Vehicle",
+			"Vehicle"
 		};
 
 		public override void DrawPage ()
@@ -67,7 +67,10 @@ namespace MyGame
 			case 2:
 				UtilityFunction.gameStateStack.Push (GameState.ViewingSettingPage);
 				break;
-			case 4:
+			case 3:
+				UtilityFunction.gameStateStack.Push (GameState.Instruction);
+				break;
+			case 5:
 				UtilityFunction.gameStateStack.Push (GameState.ViewingCarSelection);
 				break;
 			default:

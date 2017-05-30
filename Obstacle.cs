@@ -70,6 +70,14 @@ namespace MyGame
 				cond |= SwinGame.PointInRect (SwinGame.PointAt ((float)X - WIDTH, (float)Y), (float)p.X - WIDTH, (float)p.Y - HEIGHT, WIDTH, HEIGHT);
 				cond |= SwinGame.PointInRect (SwinGame.PointAt ((float)X, (float)Y - HEIGHT), (float)p.X - WIDTH, (float)p.Y - HEIGHT, WIDTH, HEIGHT);
 				cond |= SwinGame.PointInRect (SwinGame.PointAt ((float)X - WIDTH, (float)Y - HEIGHT), (float)p.X - WIDTH, (float)p.Y - HEIGHT, WIDTH, HEIGHT);
+				if (!p.isInvisible && cond &&
+				    (
+					    GetObstacleType == ObstacleType.Car ||
+					    GetObstacleType == ObstacleType.Lorry ||
+					    GetObstacleType == ObstacleType.Motorcycle
+					   )) {
+					SwinGame.PlaySoundEffect("error.wav");
+				}
 				return cond;
 			}
 			return false;

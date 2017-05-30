@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug-Windows</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
@@ -92,7 +91,6 @@
     <Compile Include="Car.cs" />
     <Compile Include="Lorry.cs" />
     <Compile Include="Motorcycle.cs" />
-    <Compile Include="Fuel.cs" />
     <Compile Include="TestAll.cs" />
     <Compile Include="Obstacle.cs" />
     <Compile Include="PlayerVehicle.cs" />
@@ -114,6 +112,7 @@
     <Compile Include="src\GameStage.cs" />
     <Compile Include="src\CarSelectionController.cs" />
     <Compile Include="src\CarType.cs" />
+    <Compile Include="src\InstructionController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">
@@ -211,6 +210,7 @@
     <None Include="car.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <Compile Include="Fuel.cs" />
     <None Include="fuel.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -242,6 +242,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Resources\images\SportCar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\sounds\hello.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

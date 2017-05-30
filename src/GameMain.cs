@@ -16,6 +16,7 @@ namespace MyGame
             GameController myGame = new GameController();
 			SettingController mySetting = new SettingController ();
 			CarSelectionController myCar = new CarSelectionController ();
+			InstructionController myInstruction = new InstructionController ();
 			UtilityFunction.gameStateStack.Push (GameState.ViewingMainPage);
 			Page page = myMenu;
             //Run the game loop
@@ -41,9 +42,12 @@ namespace MyGame
 						page = mySetting;
 						break;
 					case GameState.ViewingCarSelection:
-				case GameState.ChangingCar:
-					page = myCar;
-					break;
+					case GameState.ChangingCar:
+						page = myCar;
+						break;
+					case GameState.Instruction:
+					page = myInstruction;
+						break;
 					default:
 						page = new MainMenuController();
 						break;

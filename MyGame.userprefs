@@ -7,35 +7,18 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workbench ActiveDocument="CarshoRusho Status">
     <Files>
-      <File FileName="src\GameController.cs" Line="9" Column="19" />
-      <File FileName="GameBoard.cs" Line="202" Column="7" />
-      <File FileName="Obstacle.cs" Line="61" Column="22" />
+      <File FileName="src\GameController.cs" Line="50" Column="1" />
+      <File FileName="GameBoard.cs" Line="202" Column="73" />
       <File FileName="src\GameDifficulty.cs" Line="9" Column="10" />
-      <File FileName="UtilityFunction.cs" Line="16" Column="4" />
-      <File FileName="src\GameMain.cs" Line="18" Column="4" />
-      <File FileName="TestAll.cs" Line="30" Column="30" />
-      <File FileName="src\MainMenuController.cs" Line="19" Column="1" />
-      <File FileName="PlayerVehicle.cs" Line="116" Column="56" />
-      <File FileName="src\Turbo.cs" Line="17" Column="45" />
-      <File FileName="src\SettingController.cs" Line="8" Column="25" />
-      <File FileName="MyGame.csproj" Line="1" Column="1" />
+      <File FileName="src\SettingController.cs" Line="149" Column="34" />
+      <File FileName="src\InstructionController.cs" Line="1" Column="1" />
+      <File FileName="src\GameMain.cs" Line="19" Column="4" />
+      <File FileName="src\MainMenuController.cs" Line="70" Column="10" />
+      <File FileName="PlayerVehicle.cs" Line="16" Column="26" />
+      <File FileName="src\CarSelectionController.cs" Line="76" Column="4" />
+      <File FileName="Obstacle.cs" Line="80" Column="6" />
       <File FileName="CarshoRusho Status" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="MyGame" expanded="True">
-            <Node name="MyGame" expanded="True">
-              <Node name="References" expanded="True" />
-              <Node name="Resources" expanded="True">
-                <Node name="images" expanded="True" />
-              </Node>
-              <Node name="src" expanded="True" selected="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
 </Properties>

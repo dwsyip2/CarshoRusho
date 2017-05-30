@@ -9,6 +9,7 @@ namespace MyGame
 		ChangingDifficulty,
 		GameOverPage,
 		ViewingCarSelection,
-		ChangingCar
+		ChangingCar,
+		Instruction
 	}
 }

@@ -200,7 +200,6 @@ namespace MyGame
 							ScoreBoard.Life = 0;
 							SwinGame.PlaySoundEffect ("Bomb.wav");
 							SwinGame.DrawBitmap ("explosion1.png", (float)xMin, (float)yMin);
-
 						}
 
 						if (_obstacles [i] is Turbo) {

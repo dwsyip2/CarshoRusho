@@ -116,7 +116,7 @@ namespace MyGame
 				bool b = CarSelectionController.CarVariety.Equals (CarType.Car);
 				bool a = CarSelectionController.CarVariety.Equals (CarType.SportCar);
 				if (b == true) {
-					SwinGame.DrawBitmap ("Car.png", (float)X, (float)Y);
+					SwinGame.DrawBitmap ("Player.png", (float)X, (float)Y);
 				} else if (a == true) {
 					SwinGame.DrawBitmap ("SportCar.png", (float)X, (float)Y);
 				}
