@@ -11,9 +11,11 @@ namespace MyGame
             //Open the game window
             SwinGame.OpenGraphicsWindow("GameMain", 900, 650);
 			GameResources.LoadResources ();
+			SwinGame.PlayMusic ("hello.mp3");
 			MainMenuController myMenu = new MainMenuController ();
             GameController myGame = new GameController();
 			SettingController mySetting = new SettingController ();
+			CarSelectionController myCar = new CarSelectionController ();
 			UtilityFunction.gameStateStack.Push (GameState.ViewingMainPage);
 			Page page = myMenu;
             //Run the game loop
@@ -38,6 +40,10 @@ namespace MyGame
 					case GameState.ChangingDifficulty:
 						page = mySetting;
 						break;
+					case GameState.ViewingCarSelection:
+				case GameState.ChangingCar:
+					page = myCar;
+					break;
 					default:
 						page = new MainMenuController();
 						break;
