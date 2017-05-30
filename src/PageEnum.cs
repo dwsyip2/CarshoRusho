@@ -7,6 +7,8 @@ namespace MyGame
 		ViewingGamePage,
 		ViewingSettingPage,
 		ChangingDifficulty,
-		GameOverPage
+		GameOverPage,
+		ViewingCarSelection,
+		ChangingCar
 	}
 }

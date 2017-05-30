@@ -10,6 +10,8 @@ public static class GameResources
 		_Fonts.Add (fontName, SwinGame.LoadFont (SwinGame.PathToResource (filename, ResourceKind.FontResource), size));
 	}
 
+	private static Dictionary<string, Music> _Music = new Dictionary<string, Music> ();
+
 	static void LoadFonts ()
 	{
 		NewFont ("ArialLarge", "arial.ttf", 80);
@@ -27,6 +29,29 @@ public static class GameResources
 	public static Font GameFont (string font)
 	{
 		return _Fonts [font];
+	}
+
+	private static void NewMusic (string NameMusic, string filename)
+	{
+		_Music.Add (NameMusic, Audio.LoadMusic (SwinGame.PathToResource (filename, ResourceKind.SoundResource)));
+	}
+
+	public static Music GameMusic (string music)
+	{
+		return _Music [music];
+	}
+
+	private static void FreeMusic ()
+	{
+		foreach (Music obj in _Music.Values) {
+			Audio.FreeMusic (obj);
+		}
+	}
+
+	public static void FreeResources ()
+	{
+		FreeMusic ();
+		SwinGame.ProcessEvents ();
 	}
 
 }
