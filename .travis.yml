@@ -4,7 +4,7 @@ install:
   - nuget restore MyGame.sln
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
   - sudo apt-get install mono-complete
-  - sudo apt-get install -y gtk-sharp2
+ 
 script:
   - msbuild MyGame.sln
   - mstest MyGame.sln
